@@ -1,6 +1,10 @@
 # InfraGuardian AI - Dokploy Edition
 
-Agente autónomo para gestión de infraestructura Dokploy con Telegram Bot y GPT-OSS 20B.
+🤖 Agente autónomo para gestión de infraestructura Dokploy con Telegram Bot y GPT-OSS 20B.
+
+[![GitHub](https://img.shields.io/badge/github-infraguardian--dokploy-blue?logo=github)](https://github.com/mandycs/infraguardian-dokploy)
+[![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ## Características
 
@@ -20,6 +24,10 @@ Agente autónomo para gestión de infraestructura Dokploy con Telegram Bot y GPT
 ## Instalación
 
 ```bash
+# 0. Clonar el repositorio
+git clone https://github.com/mandycs/infraguardian-dokploy.git
+cd infraguardian-dokploy
+
 # 1. Crear virtual environment
 python3 -m venv venv
 source venv/bin/activate  # Linux/Mac
@@ -76,16 +84,19 @@ El bot responde a cualquier mensaje de texto usando GPT-OSS 20B. No necesitas co
 infraguardian-dokploy/
 ├── src/
 │   ├── integrations/
-│   │   └── dokploy_client.py  # Cliente API Dokploy
+│   │   └── dokploy_client.py   # Cliente API Dokploy
 │   ├── bot/
-│   │   └── telegram_bot.py    # Bot de Telegram
+│   │   └── telegram_bot.py     # Bot de Telegram
+│   ├── llm/
+│   │   └── gpt_oss_client.py   # Cliente GPT-OSS
 │   └── monitor/
-│       └── service_monitor.py # Sistema de monitoreo
+│       └── service_monitor.py  # Sistema de monitoreo
 ├── docs/
 │   └── PROYECTO_AGENTE_AUTONOMO_DOKPLOY.md
-├── logs/
-├── tests/
-└── requirements.txt
+├── main.py                     # Punto de entrada
+├── requirements.txt
+├── .env.example
+└── README.md
 ```
 
 ## Documentación
